@@ -76,7 +76,7 @@ class Profile extends Component {
                     <h3>Profile</h3>
                     <div id='profilebox'>
                         <div className='profile'>
-                            <img src={user.img}/>
+                            <img src={user.img} alt="default"/>
                             <div className='profileinfo'>
                                 <p>{user.name}</p>
                                 <p>{user.email}</p>
