@@ -20,14 +20,9 @@ handleClick = (event) => {
         
         return (
             <div id="home">
-                <h3>Welcome!</h3>
+                <h3>Welcome! Log In or Sign Up to have some fun...</h3>
                 <div className="home-container">
                     <div className='home-btn'>
-                        <Link to='/login'>
-                            <button>
-                                Click Here to Create a Meme!
-                            </button>
-                        </Link>
                  
                     </div>
                 </div>

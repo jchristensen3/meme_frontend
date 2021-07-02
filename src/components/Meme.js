@@ -1,20 +1,17 @@
 // Import React (Mandatory Step).
-import React from "react";
+import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
  
 // MemeGenerator component to generate a meme
-class Meme extends React.Component {
+class Meme extends Component {
   state = {
     topText: "",
     bottomText: "",
     allMemeImgs: [],
     randomImg: ""
   };
- 
-  // componentDidMount() method to fetch
-  // images from the API
-  componentDidMount() {
-     
-    // Fetching data from the API
+
+  componentDidMount = () => {
     fetch("https://api.imgflip.com/get_memes")
          .then(response => response.json())
          .then(content =>
@@ -24,13 +21,13 @@ class Meme extends React.Component {
            })
          );
      }
-handleChange = event => {
+handleChange = (event) => {
         const { name, value } = event.target;
         this.setState({
           [name]: value
         });
       };
-handleSubmit = event => {
+handleSubmit = (event) => {
         event.preventDefault();
         const { allMemeImgs } = this.state;
         const rand =
@@ -58,9 +55,13 @@ handleSubmit = event => {
                 name="bottomText"
                 onChange={this.handleChange}
               />
-              <button>Generate</button>
+              <button>New Meme</button>
             </form>
-     
+                <Link to='/gif'>
+                    <button>
+                        Click Here to search for a Gif!
+                    </button>
+                </Link>
             <br />
             <div className="meme">
               {this.state.randomImg === "" ? "" :

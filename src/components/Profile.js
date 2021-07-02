@@ -10,10 +10,10 @@ class Profile extends Component {
         super(props)
         this.state = {
             user: {
+                img: '',
                 name: '',
                 email: '',
                 username: '',
-                img: '',
                 display: false
             }
         }
@@ -72,6 +72,7 @@ class Profile extends Component {
 
     render() {
         const user = this.state.user
+        console.log(user.img)
         return (
             <div className="user">
                 <div id='profilecontainer'>
@@ -81,10 +82,17 @@ class Profile extends Component {
                                 Click Here to Create a Meme!
                             </button>
                         </Link>
+                        <Link to='/gif'>
+                            <button>
+                                Click Here to search for a Gif!
+                            </button>
+                        </Link>
                     <div id='profilebox'>
                         <div className='profile'>
-                            <img src={user.img}/>
+                                <img src={user.img}/>
+
                             <div className='profileinfo'>
+                                
                                 <p>{user.name}</p>
                                 <p>{user.email}</p>
                                 <p>{user.username}</p>
