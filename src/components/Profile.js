@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import EditProfile from "./EditProfile"
 import axios from 'axios'
 import EditProfileButton from './EditProfileButton'
+import {Link} from 'react-router-dom'
+
 
 class Profile extends Component {
     constructor(props) {
@@ -9,8 +11,8 @@ class Profile extends Component {
         this.state = {
             user: {
                 name: '',
-                username: '',
                 email: '',
+                username: '',
                 img: '',
                 display: false
             }
@@ -74,9 +76,14 @@ class Profile extends Component {
             <div className="user">
                 <div id='profilecontainer'>
                     <h3>Profile</h3>
+                         <Link to='/meme'>
+                            <button>
+                                Click Here to Create a Meme!
+                            </button>
+                        </Link>
                     <div id='profilebox'>
                         <div className='profile'>
-                            <img src={user.img} alt="default"/>
+                            <img src={user.img}/>
                             <div className='profileinfo'>
                                 <p>{user.name}</p>
                                 <p>{user.email}</p>

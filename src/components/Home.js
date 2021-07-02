@@ -23,7 +23,7 @@ handleClick = (event) => {
                 <h3>Welcome!</h3>
                 <div className="home-container">
                     <div className='home-btn'>
-                        <Link to='/meme'>
+                        <Link to='/login'>
                             <button>
                                 Click Here to Create a Meme!
                             </button>
