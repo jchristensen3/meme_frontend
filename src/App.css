@@ -12,20 +12,72 @@ footer {
 
 }
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 0;
-  height: 3vh;
-  font-weight: bold;
-  font-size: 30px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 5px 0px #b9b7b7;
 }
-a {
-  color: inherit;
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
   text-decoration: none;
-  height: 25px;
-  font-weight: bold;
-  cursor: pointer;
+  color: rgb(27, 26, 26);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 30px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .8s;
+}
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: rgb(20, 20, 20);
+  height: 5px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+a:hover{
+  background-color: #b9b7b7;
 }
 .meme {
   position: relative;
