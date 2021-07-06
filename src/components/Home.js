@@ -19,14 +19,11 @@ handleClick = (event) => {
     render(){
         
         return (
-            <div id="home">
-                <h3>Welcome! Log In or Sign Up to have some fun...</h3>
-                <div className="home-container">
-                    <div className='home-btn'>
-                 
-                    </div>
-                </div>
-            </div>
+        <div id="home">
+                <h1>WELCOME! </h1>
+                <h2>CREATE a MEME! or find your favorite GIF!</h2>
+                <h3><Link to='/login'>Log In</Link> or <Link to='/signup'>Sign Up</Link> to have some FUN....</h3>
+        </div>
         )
     }
 }

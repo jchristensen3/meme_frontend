@@ -25,6 +25,7 @@ class App extends Component {
 
   render() {
     return (
+    
       <div className="App">
         <Header />
         <main>
@@ -35,8 +36,13 @@ class App extends Component {
           <Route path='/profile/:id' render={(props) => <Profile {...props} />} />
           <Route path='/gif' render={(props) => <Gif {...props}/>} />
         </main>
+       
         <Footer />
       </div>
+      
+        
+        
+   
     );
   }
 }

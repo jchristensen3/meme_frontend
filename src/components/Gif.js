@@ -43,7 +43,7 @@ class Gif extends React.Component {
                     <button>
                         Click Here to Create a Meme!
                     </button>
-                </Link><Link to='/profile/:id'>Profile Page</Link>
+                </Link>
           <GifSearch onTermChange={term => this.handleTermChange(term)}/>
           <GifList  gifs={this.state.gifs}
                   onGifSelect={selectedGif => this.openModal(selectedGif) } />
