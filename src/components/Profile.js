@@ -5,10 +5,13 @@ import EditProfileButton from './EditProfileButton'
 import ProfilePicChanger from './ProfilePicChanger'
 import {Link} from 'react-router-dom'
 import 'antd/dist/antd.css';
-import { Avatar } from 'antd';
 import Pic1 from "./pics/1.jpg";
 import Pic2 from "./pics/2.jpg";
 import Pic3 from "./pics/3.png";
+import Pic4 from "./pics/4.gif";
+import Pic5 from "./pics/5.gif";
+import Pic6 from "./pics/6.jpg";
+
 
 
 
@@ -98,7 +101,7 @@ class Profile extends Component {
             
             <div className="user">
              <h3>Profile</h3>
-                         <Link to='/meme'>
+                         <Link to='/mymeme'>
                             <button>
                                 Click Here to Create a Meme!
                             </button>
@@ -112,10 +115,10 @@ class Profile extends Component {
                    
                     
                             <div id='profilelayout'>
-                                <img src={user.img}/>
-                                <img style={{width: this.state.styles.width, height: this.state.styles.height ? 'block' : 'none' }} src={this.state.profileImage}/>
-                            
-                                <ProfilePicChanger handleImageChange={this.handleImageChange} pic1={Pic1} pic2={Pic2} pic3={Pic3}/>
+                                <img style={{width: this.state.styles.width,  height: this.state.styles.height ? 'block' : 'none' }} src={user.img} />
+                                <img style={{width: this.state.styles.width,  height: this.state.styles.height ? 'block' : 'none' }} src={this.state.profileImage}/>
+                                
+                                <ProfilePicChanger handleImageChange={this.handleImageChange} pic1={Pic1} pic2={Pic2} pic3={Pic3} pic4={Pic4} pic5={Pic5} pic6={Pic6} />
                             </div> 
                             <div className='profileinfo'>
                                 <p>{user.name}</p>
