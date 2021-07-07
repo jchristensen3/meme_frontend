@@ -12,6 +12,8 @@ import Gif from  './components/Gif';
 
 
 
+
+
 import {Route} from 'react-router-dom'
 
 
@@ -29,12 +31,14 @@ class App extends Component {
       <div className="App">
         <Header />
         <main>
+        
           <Route path='/' exact render={() => <Home />}/>
           <Route path='/login' render={(props) => <Login {...props} />} />
           <Route path='/signup' render={(props) => <Signup {...props}/>} />
           <Route path='/meme' render={(props) => <Meme {...props}/>} />
           <Route path='/profile/:id' render={(props) => <Profile {...props} />} />
           <Route path='/gif' render={(props) => <Gif {...props}/>} />
+          
         </main>
        
         <Footer />

@@ -20,10 +20,16 @@ handleClick = (event) => {
         
         return (
         <div id="home">
-                <h1>WELCOME! </h1>
+                <h1>
+                <img src="https://i.gifer.com/2VL3.gif" alt="grumpy"></img>
+                WELCOME!
+                <img src="https://i.gifer.com/2VL3.gif" alt="grumpy1"></img>
+                </h1>
                 <h2>CREATE a MEME! or find your favorite GIF!</h2>
                 <h3><Link to='/login'>Log In</Link> or <Link to='/signup'>Sign Up</Link> to have some FUN....</h3>
-        </div>
+        
+            
+        </div>    
         )
     }
 }

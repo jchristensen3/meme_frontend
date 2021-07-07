@@ -2,19 +2,31 @@ import React, { Component } from 'react'
 import EditProfile from "./EditProfile"
 import axios from 'axios'
 import EditProfileButton from './EditProfileButton'
+import ProfilePicChanger from './ProfilePicChanger'
 import {Link} from 'react-router-dom'
+import 'antd/dist/antd.css';
+import { Avatar } from 'antd';
+import Pic1 from "./pics/1.jpg";
+import Pic2 from "./pics/2.jpg";
+import Pic3 from "./pics/3.png";
+
 
 
 class Profile extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            styles: {
+                width: "300px",
+                height: "300px",
+                    },
+            profileImage: '',
             user: {
                 img: '',
                 name: '',
                 email: '',
                 username: '',
-                display: false
+                display: false,
             }
         }
     }
@@ -36,6 +48,7 @@ class Profile extends Component {
             }
         }))
     }
+
 
     handleSubmit =(event) => {
         event.preventDefault()
@@ -70,13 +83,21 @@ class Profile extends Component {
         }))
     }
 
+    handleImageChange = (profileImage) => {
+        this.setState({
+            profileImage
+        })
+    }
+
+
+
     render() {
         const user = this.state.user
         console.log(user.img)
         return (
+            
             <div className="user">
-                <div id='profilecontainer'>
-                    <h3>Profile</h3>
+             <h3>Profile</h3>
                          <Link to='/meme'>
                             <button>
                                 Click Here to Create a Meme!
@@ -87,17 +108,23 @@ class Profile extends Component {
                                 Click Here to search for a Gif!
                             </button>
                         </Link>
-                    <div id='profilebox'>
-                        <div className='profile'>
+                <div id='profilecontainer'>
+                   
+                    
+                            <div id='profilelayout'>
                                 <img src={user.img}/>
-
+                                <img style={{width: this.state.styles.width, height: this.state.styles.height ? 'block' : 'none' }} src={this.state.profileImage}/>
+                            
+                                <ProfilePicChanger handleImageChange={this.handleImageChange} pic1={Pic1} pic2={Pic2} pic3={Pic3}/>
+                            </div> 
                             <div className='profileinfo'>
-                                
                                 <p>{user.name}</p>
                                 <p>{user.email}</p>
                                 <p>{user.username}</p>
-                            </div>
-                            <div className='profileedit'>
+                            
+                    
+                       
+                            
                                 {user.display &&
                                 <EditProfile 
                                     user={user} 
@@ -109,11 +136,13 @@ class Profile extends Component {
                                 {!user.display &&
                                 <EditProfileButton handleButtonView={this.handleButtonView}/>
                                 }
+                                
+                               
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            </div>
+               
+                            </div>  
+            
         )
     }
 }

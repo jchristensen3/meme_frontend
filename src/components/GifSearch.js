@@ -15,8 +15,8 @@ class GifSearch extends React.Component {
     render() {
         return (
             <div className="search">
-               <input placeholder="Enter text to search for gifs!" onChange={event => this.onInputChange(event.target.value)} />
-            </div>
+               <input  type='text' id='placeholder' placeholder="Search GIFs!" onChange={event => this.onInputChange(event.target.value)} />
+        </div>
     );
   }
 }
