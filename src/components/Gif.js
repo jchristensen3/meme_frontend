@@ -16,6 +16,18 @@ class Gif extends React.Component {
         };
         this.handleTermChange = this.handleTermChange.bind(this);
     }
+
+    onSaveGif = e => {
+        e.preventDefault();
+    
+        const canv = document.getElementById("gifCanvas");
+    
+        const gif = canv
+          .toDataURL("gif/gif")
+          .replace("gif/gif", "gif/octet-stream");
+        window.location.href = gif;
+      };
+
     openModal(gif) {
         this.setState({
             modalIsOpen: true,
@@ -44,7 +56,9 @@ class Gif extends React.Component {
                         Click Here to Create a Meme!
                     </button>
                 </Link>
-          <GifSearch onTermChange={term => this.handleTermChange(term)}/>
+          <GifSearch onTermChange={term => this.handleTermChange(term)}
+              onSaveGif={this.onSaveGif}
+          />
           <GifList  gifs={this.state.gifs}
                   onGifSelect={selectedGif => this.openModal(selectedGif) } />
           <GifModal modalIsOpen={this.state.modalIsOpen}

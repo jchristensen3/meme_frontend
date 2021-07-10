@@ -11,6 +11,7 @@ import Pic3 from "./pics/3.png";
 import Pic4 from "./pics/4.gif";
 import Pic5 from "./pics/5.gif";
 import Pic6 from "./pics/6.jpg";
+import Pic7 from "./pics/7.gif";
 
 
 
@@ -101,7 +102,7 @@ class Profile extends Component {
             
             <div className="user">
              <h3>Profile</h3>
-                         <Link to='/mymeme'>
+                         <Link to='/meme'>
                             <button>
                                 Click Here to Create a Meme!
                             </button>
@@ -118,7 +119,7 @@ class Profile extends Component {
                                 <img style={{width: this.state.styles.width,  height: this.state.styles.height ? 'block' : 'none' }} src={user.img} />
                                 <img style={{width: this.state.styles.width,  height: this.state.styles.height ? 'block' : 'none' }} src={this.state.profileImage}/>
                                 
-                                <ProfilePicChanger handleImageChange={this.handleImageChange} pic1={Pic1} pic2={Pic2} pic3={Pic3} pic4={Pic4} pic5={Pic5} pic6={Pic6} />
+                                <ProfilePicChanger handleImageChange={this.handleImageChange} pic1={Pic1} pic2={Pic2} pic3={Pic3} pic4={Pic4} pic5={Pic5} pic6={Pic6} pic7={Pic7}/>
                             </div> 
                             <div className='profileinfo'>
                                 <p>{user.name}</p>
