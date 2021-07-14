@@ -41,13 +41,110 @@ class Login extends Component {
     render() {
         return (
             
-            <div className="user login">
+            <div className="userlogin">
+            
                 <div className="container">
-                    <h2>Log In</h2>
-       
+                    
+                    <Particles
+                className="particles-login"
+                params={{
+        particles: {
+        number: {
+            value: 300
+        },
+        color: {
+            value: ["#00FFFF","#7FFF00"],
+            animation: {
+                enable: true,
+                speed: 50,
+                sync: false
+            }
+        },
+        shape: {
+            type: ["circle", "star", "edge", "polygon","triangle"],
+},
+polygon: {
+    sides: 5
+},
+size: {
+    value: 30,
+    random: true,
+    animation: {
+        enable: true,
+        speed: 20,
+        minimumValue: 0.1,
+        sync: false
+    }
+},
+        line_linked: {
+            enable: false,
+            distance: 150, 
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1
+          },
+        "twinkle": {
+      "particles": {
+        "enable": true,
+        "frequency": 0.0,
+        "opacity": 1,
+        "color": {
+          "value": "#ffffff"
+        }
+      }
+    },
+        move: {
+            enable: true,
+        },
+    },
+    
+    interactivity: {
+        detectsOn: "canvas",
+        events: {
+            onHover: {
+                enable: true,
+                mode: "repulse"
+            },
+            onClick: {
+        enable: true,
+        mode: "push"
+      },
+      resize: true
+    
+        }
+    },
+        modes: {
+            grab: {
+                distance: 400,
+                links: {
+                    opacity: 1
+                }
+            },
+            square: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 0.8
+            },
+            repulse: {
+                distance: 100
+            },
+            push: {
+                quantity: 4
+            },
+            remove: {
+                quantity: 2
+            }
+        },
+    
+    detectRetina: true,
+}
+      }     
+      />
+      
                     <form onSubmit={this.handleSubmit}>
                         <div className='userinfo'>
-                        
+                        <h2>Log In</h2>
                             <label for="username">Username: </label>
                             <input onChange={this.handleOnChange} type='text' name='username' placeholder='username' />
                         </div>
@@ -55,139 +152,11 @@ class Login extends Component {
                             <label for="password">Password: </label>
                             <input onChange={this.handleOnChange} type='password' name='password' placeholder='password' />
                         </div>
-                        <input className='formbtn' type='submit' value='Log In'/>
+                        <input className='frmbtn' type='submit' value='Log In'/>
        
                     </form>
                 </div>
-                <Particles
-        params={{
-            fpsLimit: 60,
-  particles: {
-    number: {
-      value: 80,
-      density: {
-        enable: true,
-        value_area: 800
-      }
-    },
-    color: {
-      value: "#ffffff"
-    },
-    shape: {
-      type: "circle",
-      stroke: {
-        width: 0,
-        color: "#000000"
-      },
-      polygon: {
-        nb_sides: 5
-      },
-      image: {
-        src: "images/github.svg",
-        width: 100,
-        height: 100
-      }
-    },
-    opacity: {
-      value: 1,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false
-      }
-    },
-    size: {
-      value: 20,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 40,
-        size_min: 0.1,
-        sync: false
-      }
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ffffff",
-      opacity: 1,
-      width: 1
-    },
-    move: {
-      enable: true,
-      speed: 2,
-      direction: "none",
-      random: false,
-      straight: false,
-      out_mode: "out",
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200
-      }
-    }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onHover: {
-        enable: true,
-        mode: "repulse",
-        parallax: {
-          enable: false,
-          force: 60,
-          smooth: 10
-        }
-      },
-      onClick: {
-        enable: true,
-        mode: "push"
-      },
-      resize: true
-    },
-    modes: {
-      grab: {
-        distance: 400,
-        lineLinked: {
-          opacity: 1
-        }
-      },
-      bubble: {
-        distance: 400,
-        size: 100,
-        duration: 2,
-        opacity: 1,
-        speed: 3
-      },
-      repulse: {
-        distance: 200
-      },
-      push: {
-        particles_nb: 4
-      },
-      remove: {
-        particles_nb: 2
-      }
-    }
-  },
-  backgroundMask: {
-    enable: true,
-    cover: {
-      value: {
-        r: 255,
-        g: 255,
-        b: 255
-      }
-    }
-  },
-  retina_detect: true,
-    position: "cover"
-  }
-}
-           
-      />
+              
             </div>
         )
     }

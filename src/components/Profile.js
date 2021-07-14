@@ -4,6 +4,7 @@ import axios from 'axios'
 import EditProfileButton from './EditProfileButton'
 import ProfilePicChanger from './ProfilePicChanger'
 import {Link} from 'react-router-dom'
+import ParticleEffectButton from 'react-particle-effect-button'
 import 'antd/dist/antd.css';
 import Pic1 from "./pics/1.jpg";
 import Pic2 from "./pics/2.jpg";
@@ -31,7 +32,8 @@ class Profile extends Component {
                 email: '',
                 username: '',
                 display: false,
-            }
+            },
+            hidden: false
         }
     }
 
@@ -101,11 +103,13 @@ class Profile extends Component {
         return (
             
             <div className="user">
-             <h3>Profile</h3>
-                         <Link to='/meme'>
-                            <button>
-                                Click Here to Create a Meme!
-                            </button>
+             <h1>Profile</h1>
+                         <Link to='/mymeme'>
+                         <ParticleEffectButton
+                         color='#121019'
+                             style={this.state.hidden}
+                            >Click Here to Create a Meme!
+                            </ParticleEffectButton>
                         </Link>
                         <Link to='/gif'>
                             <button>

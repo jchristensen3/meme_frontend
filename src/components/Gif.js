@@ -51,7 +51,7 @@ class Gif extends React.Component {
     render() {
       return (
         <div>
-                <Link to='/meme'>
+                <Link to='/mymeme'>
                     <button>
                         Click Here to Create a Meme!
                     </button>

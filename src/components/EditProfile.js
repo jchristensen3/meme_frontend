@@ -20,10 +20,11 @@ const EditProfile = (props) => {
                     <label for="img">Image: </label>
                     <input onChange={props.handleChange} type="text" name="img" value={props.user.img} placeholder="Image" />
                 </div>
-                <input id='editbtn' type="submit" value="Edit Profile" />
+                <input className='frmbtn' type="submit" value="Edit Profile" />
+                <button className='frmbtn' onClick={props.handleDelete}>Delete Profile</button>
            </form>
 
-           <button id='deletebtn' onClick={props.handleDelete}>Delete Profile</button>
+           
         </div>
     )
 }
