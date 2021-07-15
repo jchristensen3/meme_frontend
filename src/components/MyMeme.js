@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Form from "./Form";
 import CurrentImage from "./CurrentImage";
 import Memes from "./Memes";
+import {Link} from 'react-router-dom'
 
 class MyMeme extends Component {
   state = {
@@ -115,7 +116,7 @@ class MyMeme extends Component {
     const pos = this.getMousePos(canv, e);
 
     ctx.font = "800 40px Impact, Arial";
-    ctx.fillStyle = "#433487";
+    ctx.fillStyle = "#0f0f0f";
     ctx.fillText(this.state.userText, pos.x, pos.y);
 
     this.setState(ps => {
@@ -147,7 +148,7 @@ class MyMeme extends Component {
 
     setTimeout(() => {
       ctx.font = "800 40px Impact, Arial";
-      ctx.fillStyle = "#433487";
+      ctx.fillStyle = "#0f0f0f";
       this.state.allEdits.forEach(edit => {
         ctx.fillText(edit.text, edit.posX, edit.posY);
       });
@@ -158,17 +159,24 @@ class MyMeme extends Component {
     return (
       <div className="meme-generator">
         <div className="top-container" id="top-container">
-          <Form
+        <Link to='/gif'>
+                    <button className="search-button">
+                        Click Here to Search for a Gif!
+                    </button>
+                </Link>
+                <a className="profilelink" href="javascript:history.back()">Profile Page</a>
+        <Form
             removeLastText={this.removeLastText}
             userText={this.state.userText}
             handleTextChange={this.handleTextChange}
             onSaveMeme={this.onSaveMeme}
           />
-
+          
           <CurrentImage
             currentImage={this.state.currentImage}
             addTextToCanvas={this.addTextToCanvas}
           />
+        
         </div>
         <hr />
 

@@ -40,7 +40,6 @@ class Signup extends Component {
     render() {
         // console.log(this.state.data)
         return (
-            <div className="user signup">
                 <div className="container">
                 <Particles
             className="particles-space"
@@ -168,7 +167,6 @@ class Signup extends Component {
                     </div>
                 </div>
                
-            </div>
         )
     }
 }

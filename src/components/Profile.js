@@ -103,19 +103,23 @@ class Profile extends Component {
         return (
             
             <div className="user">
-             <h1>Profile</h1>
+             <h1 className="profile">Profile</h1>
+                <div className='profile-buttons'>
+                    <div className="button1">
                          <Link to='/mymeme'>
-                         <ParticleEffectButton
-                         color='#121019'
-                             style={this.state.hidden}
-                            >Click Here to Create a Meme!
-                            </ParticleEffectButton>
+                            <button> 
+                            Click Here to Create a Meme!
+                            </button>
                         </Link>
+                    </div>
+                    <div className="button2">
                         <Link to='/gif'>
                             <button>
                                 Click Here to search for a Gif!
                             </button>
                         </Link>
+                    </div>  
+                </div>    
                 <div id='profilecontainer'>
                    
                     
@@ -126,9 +130,10 @@ class Profile extends Component {
                                 <ProfilePicChanger handleImageChange={this.handleImageChange} pic1={Pic1} pic2={Pic2} pic3={Pic3} pic4={Pic4} pic5={Pic5} pic6={Pic6} pic7={Pic7}/>
                             </div> 
                             <div className='profileinfo'>
-                                <p>{user.name}</p>
-                                <p>{user.email}</p>
-                                <p>{user.username}</p>
+                                <p>NAME:  {user.name}</p>
+                                <p>USERNAME:  {user.username}</p>
+                                <p>EMAIL:  {user.email}</p>
+                               
                             
                     
                        

@@ -42,7 +42,7 @@ class ProfilePicChanger extends Component {
         return (
             <div className="ProfilePicChanger">
                  <Button type="primary" onClick={this.showModal}>
-            Select Image
+            Select an image or Edit to add your own!
                 </Button>
                     <Modal title="Profile Pic Changer" visible={this.state.visible} onOk={this.handleOk} onCancel={this.handleCancel}>
                    {imageMapper}

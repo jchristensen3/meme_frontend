@@ -16,6 +16,7 @@ class GifSearch extends React.Component {
         return (
             <div className="search">
                <input  type='text' id='placeholder' placeholder="Search GIFs!" onChange={event => this.onInputChange(event.target.value)} />
+               <a href="javascript:history.back()">Profile Page</a>
         </div>
     );
   }

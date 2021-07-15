@@ -50,15 +50,19 @@ class Gif extends React.Component {
       };
     render() {
       return (
-        <div>
+        <div >
                 <Link to='/mymeme'>
-                    <button>
+                    <button className="search-button">
                         Click Here to Create a Meme!
                     </button>
                 </Link>
+               
+                
+               
           <GifSearch onTermChange={term => this.handleTermChange(term)}
               onSaveGif={this.onSaveGif}
           />
+          
           <GifList  gifs={this.state.gifs}
                   onGifSelect={selectedGif => this.openModal(selectedGif) } />
           <GifModal modalIsOpen={this.state.modalIsOpen}

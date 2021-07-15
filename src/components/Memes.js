@@ -32,9 +32,9 @@ function Memes(props) {
   const memeImages = getMemeImageElements(allImages, handleImgClick);
 
   return (
-    <div id="meme-library-container">
-      <h2>Meme Library</h2>
-      <div className="meme-library">{memeImages}</div>
+    <div id="meme-container">
+      <h2>Memes</h2>
+      <div className="meme">{memeImages}</div>
     </div>
   );
 }

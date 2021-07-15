@@ -8,8 +8,8 @@ function CurrentImage({ currentImage, addTextToCanvas }) {
       {!src ? (
         <h2>
           <span>
-            "Click on an image from the{" "}
-            <a href="#meme-library-container">Meme Library</a> below to load."
+            "Click &#10148; {" "}
+            <a href="#meme-container">Memes </a> to select an image from below."
           </span>
         </h2>
       ) : (
@@ -18,8 +18,6 @@ function CurrentImage({ currentImage, addTextToCanvas }) {
             Current Image: <em>{alt}</em>
           </h2>
           <p>
-            Type text
-            <br />
             Right click on Image and select <strong>
               "Save image as..."
             </strong>{" "}
