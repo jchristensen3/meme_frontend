@@ -11,7 +11,7 @@ Do you love MEMEs? or maybe you prefer Gifs? Well you are in luck. You can creat
   React,
   Axios,
   Particles,
-  Modals,
+  Modals
   
   
 ## URLs
