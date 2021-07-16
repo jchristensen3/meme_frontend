@@ -1,7 +1,7 @@
 ## Title:
 Meme/Gif Generator
 
-##Home Page:
+## Home Page:
 ![HomePage](https://user-images.githubusercontent.com/62125512/125878485-bf2fe620-3089-45fc-91d1-8a15ae0a505c.PNG)
 
 ## Introduction:
