@@ -29,5 +29,5 @@ Do you love MEMEs? or maybe you prefer Gifs? Well you are in luck. You can creat
 API's used:<br>
  * [Meme API](https://api.imgflip.com/get_memes)
  * [Gifs API](http://api.giphy.com/v1/gifs/search)
- * [Google](https://github.com/jchristensen3/meme_frontend/files/6827154/Project4.Sources.txt)
-)
+ * [Google Links](https://github.com/jchristensen3/meme_frontend/files/6827154/Project4.Sources.txt)
+
