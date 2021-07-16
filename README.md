@@ -1,4 +1,4 @@
-"# Meme/Gif Generator(backend)
+#Meme/Gif Generator
 
 ## Introduction:
 Do you love MEMEs? or maybe you prefer Gifs? Well you are in luck. You can create your own Meme or search for your favorite Gif with this App. 
