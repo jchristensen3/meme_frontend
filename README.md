@@ -25,7 +25,9 @@ Do you love MEMEs? or maybe you prefer Gifs? Well you are in luck. You can creat
 * [/gif](http://localhost:3000/gif)
 
 ## Getting Started:
+## WireFrame:
 ![WireFrame Project 4](https://user-images.githubusercontent.com/62125512/125875548-dce3e52e-42e5-4a40-b1fe-a88f025d774f.png)
+## ERD:
 ![ERD Project4](https://user-images.githubusercontent.com/62125512/125875554-409488d1-d3fe-4b6b-9de8-474593fbc1ac.png)
 
 ## Quick Set up steps
