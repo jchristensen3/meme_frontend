@@ -30,18 +30,18 @@ Do you love MEMEs? or maybe you prefer Gifs? Well you are in luck. You can creat
 
 ## Quick Set up steps
 
--REACT
+REACT-
 npx create-react-app my-app
 cd my-app
 npm start
 
-Axios
+Axios-
 npm install axios
 
-Modal
+Modal-
 npm install react-modal
 
-Particles
+Particles-
 npm install react-particles-js
 
 
