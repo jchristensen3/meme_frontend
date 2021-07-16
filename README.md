@@ -47,6 +47,13 @@ Particles-
 npm install react-particles-js
 
 
+## Stretch Goals
+Allow user to save images and memes to their Profile page
+Enable user to move text around on meme
+Allow user to add text to Gif
+Put example edit of meme\gif on home page
+
+
 
 ### Sources: 
 API's used:<br>
