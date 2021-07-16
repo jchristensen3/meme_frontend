@@ -1,6 +1,8 @@
-## Title
+## Title:
 Meme/Gif Generator
 
+##Home Page:
+![HomePage](https://user-images.githubusercontent.com/62125512/125878485-bf2fe620-3089-45fc-91d1-8a15ae0a505c.PNG)
 
 ## Introduction:
 Do you love MEMEs? or maybe you prefer Gifs? Well you are in luck. You can create your own Meme or search for your favorite Gif with this App. 
