@@ -17,8 +17,8 @@ Do you love MEMEs? or maybe you prefer Gifs? Well you are in luck. You can creat
 * [/signup](http://localhost:3000/signup)
 * [/login](http://localhost:3000/login)
 * [/profile/:id](http://localhost:3000/profile/7)
-* [/mymeme](http://localhost:3000/jokes)
-* [/gif(http://localhost:3000/funfacts)  
+* [/mymeme](http://localhost:3000/mymeme)
+* [/gif(http://localhost:3000/gif)  
 
 ## Getting Started:
 ![WireFrame Project 4](https://user-images.githubusercontent.com/62125512/125875548-dce3e52e-42e5-4a40-b1fe-a88f025d774f.png)
